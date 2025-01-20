@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard</title>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"/>
+    <!-- styles -->
+    <link rel="stylesheet" href="../dist/output.css"/>
+</head>
+<body class="screen-540:flex screen-540:justify-center w-full min-h-screen
+    bg-very-dark-blue py-10 px-5 tablet:grid tablet:items-center tablet:px-10
+    desktop:grid desktop:place-content-center"
+>
+    <section class="font-ruby w-full screen-540:max-w-[350px] desktop:grid
+        desktop:grid-cols-dashboard desktop:gap-5 desktop:h-[420px]
+        desktop:w-[900px]"
+    >
+
+        <article class="flex flex-col w-full gap-5 h-48 bg-dark-blue rounded-xl
+            tablet:h-64 tablet:gap-10 desktop:h-full"
+        >
+            <div class="flex justify-center items-center gap-5 w-full h-3/5 bg-blue
+                rounded-xl desktop:h-2/3 desktop:flex-col desktop:items-start
+                desktop:pl-5 desktop:gap-10"
+            >
+                <img src="../src/assets/img/image-jeremy.png" alt="profile picture"
+                    class="w-16 h-16 border-white border-2 rounded-full
+                    tablet:w-24 tablet:h-24"
+                />
+                <div class="tablet:w-3/6 desktop:w-36">
+                    <p class="text-base text-pale-blue tablet:text-lg">
+                        Report for
+                    </p>
+                    <p class="text-2xl text-white font-light tablet:text-3xl
+                        desktop:w-20 desktop:text-3xl"
+                    >
+                        Jeremy Robson
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-around items-center w-full desktop:flex-col
+                desktop:items-start desktop:pl-5 desktop:h-28"
+            >
+                <button class="text-desaturate-blue text-lg tablet:text-2xl
+                    desktop:text-base cursor-pointer hover:text-white transition duration-200
+                    focus:text-white"
+                    id="daily-btn"
+                >
+                    Daily
+                </button>
+                <button class="text-desaturate-blue text-lg tablet:text-2xl
+                    desktop:text-base cursor-pointer hover:text-white transition duration-200"
+                    id="weekly-btn"
+                >
+                    Weekly
+                </button>
+                <button class="text-desaturate-blue text-lg tablet:text-2xl
+                    desktop:text-base cursor-pointer hover:text-white transition duration-200"
+                    id="monthly-btn"
+                >
+                    Monthly
+                </button>
+            </div>
+        </article>
+
+        <article class="flex flex-col gap-5 w-full mt-5 tablet:grid tablet:grid-cols-2
+            desktop:grid desktop:grid-cols-3 desktop:h-full desktop:m-0"
+        >
+            <div class="flex items-end w-full h-40 bg-work-light-red rounded-xl relative
+                overflow-x-hidden desktop:h-full"
+                id="work-card"
+            >
+                <img src="../src/assets/icons/icon-work.svg" alt="work card icon"
+                    class="absolute -top-2 right-0"
+                />
+                <div class="flex flex-col gap-2 justify-center items-center w-full h-32
+                    bg-dark-blue z-10 rounded-xl py-2 px-5 desktop:h-4/5 desktop:justify-around
+                    cursor-pointer hover:bg-dark-blue-hover transition duration-200"
+                >
+                    <div class="flex justify-between w-full">
+                        <p class="text-xl text-white desktop:text-base">
+                            Work
+                        </p>
+                        <button>
+                            <img src="../src/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full desktop:flex-col
+                        desktop:items-start"
+                    >
+                        <span class="text-3xl text-white font-extralight desktop:mb-3
+                            desktop:text-5xl current-time"
+                        >
+                            32hrs
+                        </span>
+                        <span class="text-base text-pale-blue desktop:text-sm previous-time"
+                        >
+                            Last Week - 36hrs
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-end w-full h-40 bg-soft-blue rounded-xl relative
+                overflow-x-hidden desktop:h-full"
+                id="play-card"
+            >
+                <img src="../src/assets/icons/icon-play.svg" alt="play card icon"
+                    class="absolute -top-2 right-0"
+                />
+                <div class="flex flex-col gap-2 justify-center items-center w-full h-32
+                    bg-dark-blue z-10 rounded-xl py-2 px-5 desktop:h-4/5 desktop:justify-around
+                    cursor-pointer hover:bg-dark-blue-hover transition duration-200"
+                >
+                    <div class="flex justify-between w-full">
+                        <p class="text-xl text-white desktop:text-base">
+                            Play
+                        </p>
+                        <button>
+                            <img src="../src/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full desktop:flex-col
+                        desktop:items-start"
+                    >
+                        <span class="text-3xl text-white font-extralight desktop:mb-3
+                            desktop:text-5xl current-time"
+                        >
+                            10hrs
+                        </span>
+                        <span class="text-base text-pale-blue desktop:text-sm previous-time"
+                        >
+                            Last Week - 8hrs
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-end w-full h-40 bg-study-light-red rounded-xl relative
+                overflow-x-hidden desktop:h-full"
+                id="study-card"
+            >
+                <img src="../src/assets/icons/icon-study.svg" alt="study card icon"
+                    class="absolute -top-2 right-0"
+                />
+                <div class="flex flex-col gap-2 justify-center items-center w-full h-32
+                    bg-dark-blue z-10 rounded-xl py-1 px-5 desktop:h-4/5 desktop:justify-around
+                    cursor-pointer hover:bg-dark-blue-hover transition duration-200"
+                >
+                    <div class="flex justify-between w-full">
+                        <p class="text-xl text-white desktop:text-base">
+                            Study
+                        </p>
+                        <button>
+                            <img src="../src/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full desktop:flex-col
+                        desktop:items-start"
+                    >
+                        <span class="text-3xl text-white font-extralight desktop:text-5xl
+                            desktop:mb-3 current-time"
+                        >
+                            4hrs
+                        </span>
+                        <span class="text-base text-pale-blue desktop:text-sm previous-time"
+                        >
+                            Last Week - 7hrs
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-end w-full h-40 bg-lime-green rounded-xl relative
+                overflow-x-hidden desktop:h-full"
+                id="exercise-card"
+            >
+                <img src="../src/assets/icons/icon-exercise.svg" alt="exercise card icon"
+                    class="absolute -top-2 right-0"
+                />
+                <div class="flex flex-col gap-2 justify-center items-center w-full h-32
+                    bg-dark-blue z-10 rounded-xl py-1 px-5 desktop:h-4/5 desktop:justify-around
+                    cursor-pointer hover:bg-dark-blue-hover transition duration-200"
+                >
+                    <div class="flex justify-between w-full">
+                        <p class="text-xl text-white desktop:text-base">
+                            Exercise
+                        </p>
+                        <button>
+                            <img src="../src/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full desktop:flex-col
+                        desktop:items-start"
+                    >
+                        <span class="text-3xl text-white font-extralight desktop:mb-3
+                            desktop:text-5xl current-time"
+                        >
+                            4hrs
+                        </span>
+                        <span class="text-base text-pale-blue desktop:text-sm previous-time"
+                        >
+                            Last Week - 5hrs
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-end w-full h-40 bg-violet rounded-xl relative
+                overflow-x-hidden desktop:h-full"
+                id="social-card"
+            >
+                <img src="../src/assets/icons/icon-social.svg" alt="social card icon"
+                    class="absolute -top-2 right-0"
+                />
+                <div class="flex flex-col gap-2 justify-center items-center w-full h-32
+                    bg-dark-blue z-10 rounded-xl py-1 px-5 desktop:h-4/5 desktop:justify-around
+                    cursor-pointer hover:bg-dark-blue-hover transition duration-200"
+                >
+                    <div class="flex justify-between w-full">
+                        <p class="text-xl text-white desktop:text-base">
+                            Social
+                        </p>
+                        <button>
+                            <img src="../src/assets/icons/icon-ellipsis.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full desktop:flex-col
+                        desktop:items-start"
+                    >
+                        <span class="text-3xl text-white font-extralight desktop:mb-3
+                            desktop:text-5xl current-time"
+                        >
+                            5hrs
+                        </span>
+                        <span class="text-base text-pale-blue desktop:text-sm previous-time"
+                        >
+                            Last Week - 10hrs
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-end w-full h-40 bg-soft-orange rounded-xl relative
+                overflow-x-hidden desktop:h-full"
+                id="self-care-card"
+            >
+                <img src="../src/assets/icons/icon-self-care.svg" alt="self care card icon"
+                    class="absolute -top-2 right-0"
+                />
+                <div class="flex flex-col gap-2 justify-center items-center w-full h-32
+                    bg-dark-blue z-10 rounded-xl py-1 px-5 desktop:h-4/5 desktop:justify-around
+                    cursor-pointer hover:bg-dark-blue-hover transition duration-200"
+                >
+                    <div class="flex justify-between w-full">
+                        <p class="text-xl text-white desktop:text-base">
+                            Self Care
+                        </p>
+                        <button>
+                            <img src="../src/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full desktop:flex-col
+                        desktop:items-start"
+                    >
+                        <span class="text-3xl text-white font-extralight desktop:mb-3
+                            desktop:text-5xl current-time"
+                        >
+                            2hrs
+                        </span>
+                        <span class="text-base text-pale-blue desktop:text-sm previous-time"
+                        >
+                            Last Week - 2hrs
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script src="../src/js/dashboard.js" type="module"></script>
+</body>
+</html>
