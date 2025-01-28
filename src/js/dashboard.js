@@ -13,7 +13,7 @@ const resetButtonStyles = () => {
 }
 
 // user data
-fetch('../../data/userData.json')
+fetch('/data/userData.json')
     .then(response => response.json())  // Convierte la respuesta en JSON
     .then(userData => {
         console.log(userData)
